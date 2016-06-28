@@ -1,0 +1,84 @@
+// Separate File CalculatorValue.Java
+
+import java.util.Scanner;
+
+public class CalculatorValue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		System.out.print("Enter the Value to Check it is prime number or not: ");
+		
+		Scanner read = new Scanner(System.in);
+		
+		
+		int inputvalue = read.nextInt();		
+		
+		// pc is a reference Variable used to create objects for PrimeCalculation Class
+		PrimeCalculation pc = new PrimeCalculation();
+		
+		
+		pc.Value1 = inputvalue;
+		
+		//Reference variable is used to call the method of PrimeCalculation Class	
+		pc.primeCalc();
+		
+		
+		//CalculatorValue.main(args);
+	}
+
+}
+
+//  Separte File PrimeCalculation.Java
+
+public class PrimeCalculation {
+
+	
+	int Value1;	
+	int prime;
+	
+	public void primeCalc()
+	{
+		
+		
+		for(int i=2; i<Value1; i++)
+		{		
+			
+				if(Value1%i == 0)
+				{	
+					System.out.print("Not a Prime Number ");								
+					prime = 1;
+					break;
+				}
+		}
+				
+				if(prime == 0)
+					{
+					System.out.print("Its a Prime Number ");
+					
+					}
+	}		
+}
+
+/* Output
+
+Enter the Value to Check it is prime number or not: 2
+Its a Prime Number 
+Enter the Value to Check it is prime number or not: 3
+Its a Prime Number 
+Enter the Value to Check it is prime number or not: 4
+Not a Prime Number 
+Enter the Value to Check it is prime number or not: 5
+Its a Prime Number 
+Enter the Value to Check it is prime number or not: 6
+Not a Prime Number 
+Enter the Value to Check it is prime number or not: 7
+Its a Prime Number 
+Enter the Value to Check it is prime number or not: 8
+Not a Prime Number 
+Enter the Value to Check it is prime number or not: 9
+Not a Prime Number 
+
+
+/*
